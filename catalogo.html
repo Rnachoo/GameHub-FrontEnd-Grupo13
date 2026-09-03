@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Store | Catálogo</title>
+    <meta name="description" content="Explora y filtra el catálogo de productos de GameHub Store.">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <a href="index.html" class="marca-grupo">
+                <img src="images/logo.png" alt="GameHub Store - Ir al inicio" class="logo-encabezado">
+            </a>
+
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="carrito.html">Carrito(<span id="contador-carrito">0</span>)</a></li>
+                    <li><a href="mis-ordenes.html">Mis órdenes</a></li>
+                    <li><a href="crear-cuenta.html">Crear cuenta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <nav class="ruta-navegacion" aria-label="Ruta de navegación">
+            <a href="index.html">Inicio</a> &gt;
+            <span aria-current="page">Catálogo</span>
+        </nav>
+
+        <section class="cabecera-catalogo" aria-labelledby="titulo-catalogo">
+            <p class="etiqueta-seccion">Todos los productos</p>
+            <h1 id="titulo-catalogo">Encuentra tu próximo producto</h1>
+            <p>Explora notebooks, componentes, consolas, periféricos y accesorios para tu espacio gamer.</p>
+        </section>
+
+        <div class="distribucion-catalogo">
+            <aside class="contenedor-panel-filtros" aria-label="Filtros del catálogo">
+                <details class="panel-filtros" open>
+                    <summary>
+                        <h2 id="titulo-filtros">Filtros</h2>
+                    </summary>
+
+                    <div class="contenido-filtros">
+                        <div class="encabezado-filtros">
+                            <button id="boton-limpiar-filtros" class="boton-secundario" type="button">Limpiar</button>
+                        </div>
+
+                        <form id="formulario-filtros">
+                            <div class="campo-filtro">
+                                <label for="busqueda-producto">Buscar producto</label>
+                                <input type="search" id="busqueda-producto" name="busqueda" placeholder="Nombre o marca" autocomplete="off">
+                            </div>
+
+                            <div class="campo-filtro">
+                                <label for="filtro-categoria">Categoría</label>
+                                <select id="filtro-categoria" name="categoria">
+                                    <option value="">Todas las categorías</option>
+                                    <!-- Las categorías las agregue con el java -->
+                                </select>
+                            </div>
+
+                            <div class="campo-filtro">
+                                <label for="filtro-marca">Marca</label>
+                                <select id="filtro-marca" name="marca">
+                                    <option value="">Todas las marcas</option>
+                                    <!-- Aqui igual,, las marcas las agregue con el java -->
+                                </select>
+                            </div>
+
+                            <fieldset class="grupo-precios">
+                                <legend>Rango de precio</legend>
+
+                                <div class="campos-precio">
+                                    <div class="campo-filtro">
+                                        <label for="precio-minimo">Precio mínimo</label>
+                                        <input type="number" id="precio-minimo" name="precioMinimo" min="0" step="1000" placeholder="0" aria-describedby="error-precios">
+                                    </div>
+
+                                    <div class="campo-filtro">
+                                        <label for="precio-maximo">Precio máximo</label>
+                                        <input type="number" id="precio-maximo" name="precioMaximo" min="0" step="1000" placeholder="1000000" aria-describedby="error-precios">
+                                    </div>
+                                </div>
+
+                                <span id="error-precios" class="mensaje-error" role="alert" aria-live="polite"></span>
+                            </fieldset>
+
+                            <div class="campo-stock">
+                                <input type="checkbox" id="solo-con-stock" name="soloConStock">
+                                <label for="solo-con-stock">Mostrar solamente productos disponibles</label>
+                            </div>
+
+                            <button class="boton-primario" type="submit">Aplicar filtros</button>
+                        </form>
+                    </div>
+                </details>
+            </aside>
+
+            <section class="resultados-catalogo" aria-labelledby="titulo-resultados">
+                <div class="barra-resultados">
+                    <h2 id="titulo-resultados">Productos</h2>
+
+                    <p aria-live="polite">
+                        <span id="cantidad-resultados">0</span> productos encontrados
+                    </p>
+
+                    <div class="control-orden">
+                        <label for="orden-productos">Ordenar por</label>
+                        <select id="orden-productos" name="orden">
+                            <option value="destacados">Productos destacados</option>
+                            <option value="precio-ascendente">Precio: menor a mayor</option>
+                            <option value="precio-descendente">Precio: mayor a menor</option>
+                            <option value="nombre-ascendente">Nombre: A a Z</option>
+                            <option value="nombre-descendente">Nombre: Z a A</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="lista-productos" class="grid-productos" aria-live="polite">
+                    <!-- Las tarjetas se generarán con JavaScript -->
+                </div>
+
+                <div id="mensaje-sin-resultados" class="estado-vacio" hidden>
+                    <h3>No encontramos productos</h3>
+                    <p>Prueba modificando o eliminando alguno de los filtros.</p>
+                    <button id="boton-limpiar-vacio" class="boton-secundario" type="button">Limpiar filtros</button>
+                </div>
+
+                <button id="boton-cargar-mas" class="boton-secundario boton-cargar-mas" type="button" hidden>
+                    Cargar más productos
+                </button>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <p>GameHub Store - Proyecto Academico, Desarrollo Fullstack II</p>
+            <p>© 2024 GameHub Store. Todos los derechos reservados.</p>
+            <a href="index.html">Inicio</a>
+            <img src="images/logo.png" alt="Logo de GameHub Store" class="logo-footer">
+        </div>
+    </footer>
+
+    <script src="js/datos/datos-productos.js"></script>
+    <script src="js/datos/datos-categorias.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/vistas/vista-catalogo.js"></script>
+</body>
+</html>
