@@ -123,6 +123,7 @@ input, select, textarea {
   font-size: 1rem;
 }
 .mensaje-error::before { content: "!"; }
+.mensaje-error:empty::before { content: none; }
 
 /*Encabezado y pie de página*/
 .encabezado, .footer {
@@ -191,6 +192,7 @@ input, select, textarea {
 
 
 /*De aquí en adelante va todo lo de cada vista*/
+
 /* ===== Inicio ===== */
 
 .hero-inicio {
@@ -362,6 +364,8 @@ input, select, textarea {
         grid-template-columns: 1fr;
     }
 }
+
+
 /* ===== Catálogo ===== */
 
 .ruta-navegacion {
@@ -700,7 +704,10 @@ input, select, textarea {
         grid-template-columns: 1fr;
     }
 }
+
+
 /* ===== Producto ===== */
+
 .detalle-producto {
   display: flex;
   flex-wrap: wrap;
@@ -766,7 +773,115 @@ input, select, textarea {
   opacity: 0.7;
 }
 
+
 /* ===== Carrito ===== */
+
+.tabla-carrito {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.tabla-carrito th,
+.tabla-carrito td {
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--superficie);
+}
+
+.tabla-carrito th {
+  color: #FFFFFF;
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+}
+
+/* Botón "Quitar" dentro de cada fila: mismo estilo secundario, más chico */
+.tabla-carrito .boton-secundario {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.carrito-acciones {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+/* Tarjeta de resumen: cupón + totales, alineada a la derecha */
+.resumen-carrito {
+  background: var(--superficie);
+  border-radius: var(--radio-borde);
+  padding: 1.5rem;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+#formulario-cupon {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+#formulario-cupon .campo-formulario {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.totales-carrito {
+  margin-bottom: 1.5rem;
+}
+
+.fila-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+}
+
+.fila-total dt,
+.fila-total dd {
+  margin: 0;
+}
+
+/* La fila del Total se destaca del resto: línea divisoria arriba, más grande y en blanco */
+.fila-total-final {
+  border-top: 1px solid var(--fondo);
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #FFFFFF;
+}
+
+#boton-ir-checkout {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+#carrito-vacio {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .tabla-carrito {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .resumen-carrito {
+    max-width: none;
+  }
+}
+
+
 /* ===== Checkout ===== */
+
 /* ===== Mis órdenes ===== */
+
 /* ===== Crear cuenta ===== */
