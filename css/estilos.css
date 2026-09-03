@@ -230,9 +230,33 @@ input, select, textarea {
 .input-cantidad {
   width: 90px;
 }
-
-
-
+ 
+.precio-tachado {
+  text-decoration: line-through;
+  opacity: 0.6;
+  margin-right: 0.5rem;
+}
+ 
+.precio-descuento {
+  color: var(--color-acento);
+}
+ 
+.lista-resenas {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+ 
+.resena-autor {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+ 
+.resena-fecha {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
 
 /* ===== Carrito ===== */
 /* ===== Checkout ===== */
