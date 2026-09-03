@@ -1,4 +1,4 @@
-const resenas = [
+const RESENAS = [
   {
     id: 1,
     idProducto: 1,
@@ -51,7 +51,7 @@ const resenas = [
 
 //Retorna solo las reseñas de un producto específico
 function obtenerResenasPorProducto(idProducto) {
-  return resenas.filter((resena) => resena.idProducto === idProducto);
+  return RESENAS.filter((resena) => resena.idProducto === idProducto);
 }
 
 
