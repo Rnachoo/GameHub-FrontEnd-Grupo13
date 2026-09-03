@@ -795,7 +795,6 @@ input, select, textarea {
   font-weight: 600;
 }
 
-/* Botón "Quitar" dentro de cada fila: mismo estilo secundario, más chico */
 .tabla-carrito .boton-secundario {
   padding: 0.35rem 0.8rem;
   font-size: 0.85rem;
@@ -807,7 +806,6 @@ input, select, textarea {
   margin-bottom: 2rem;
 }
 
-/* Tarjeta de resumen: cupón + totales, alineada a la derecha */
 .resumen-carrito {
   background: var(--superficie);
   border-radius: var(--radio-borde);
@@ -844,7 +842,6 @@ input, select, textarea {
   margin: 0;
 }
 
-/* La fila del Total se destaca del resto: línea divisoria arriba, más grande y en blanco */
 .fila-total-final {
   border-top: 1px solid var(--fondo);
   margin-top: 0.5rem;
@@ -882,6 +879,12 @@ input, select, textarea {
 
 /* ===== Checkout ===== */
 
+
+
+
 /* ===== Mis órdenes ===== */
+
+
+
 
 /* ===== Crear cuenta ===== */
