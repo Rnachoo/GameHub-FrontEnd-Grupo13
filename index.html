@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Store | Inicio</title>
+    <meta name="description" content="Encuentra productos gamer, componentes, consolas y accesorios en GameHub Store.">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <a href="index.html" class="marca-grupo">
+                <img src="images/logo.png" alt="GameHub Store - Ir al inicio" class="logo-encabezado">
+            </a>
+
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito(<span id="contador-carrito">0</span>)</a></li>
+                    <li><a href="mis-ordenes.html">Mis órdenes</a></li>
+                    <li><a href="crear-cuenta.html">Crear cuenta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-inicio">
+            <div class="contenedor contenido-hero-inicio">
+                <p class="etiqueta-seccion">Tu espacio gamer comienza aquí</p>
+                <h1>Todo lo que necesitas para jugar</h1>
+                <p>
+                    Descubre notebooks, componentes, consolas y accesorios
+                    seleccionados para mejorar tu experiencia.
+                </p>
+                <a href="catalogo.html" class="boton-primario">
+                    Explorar catálogo
+                </a>
+            </div>
+        </section>
+
+        <section
+            class="contenedor seccion-inicio"
+            aria-labelledby="titulo-categorias"
+        >
+            <div class="cabecera-seccion-inicio">
+                <p class="etiqueta-seccion">Encuentra lo que buscas</p>
+                <h2 id="titulo-categorias">Categorías</h2>
+            </div>
+
+            <div id="lista-categorias-inicio" class="grid-categorias">
+                <!-- Las categorías se generarán con JavaScript -->
+            </div>
+        </section>
+
+        <section
+            class="contenedor seccion-inicio"
+            aria-labelledby="titulo-destacados"
+        >
+            <div class="cabecera-seccion-inicio">
+                <div>
+                    <p class="etiqueta-seccion">Recomendados para ti</p>
+                    <h2 id="titulo-destacados">Productos destacados</h2>
+                </div>
+
+                <a href="catalogo.html" class="boton-secundario">
+                    Ver todos los productos
+                </a>
+            </div>
+
+            <div
+                id="lista-productos-destacados"
+                class="grid-productos"
+            >
+                <!-- Los productos destacados se generarán con JavaScript -->
+            </div>
+        </section>
+
+        <section
+            class="contenedor seccion-inicio seccion-video"
+            aria-labelledby="titulo-video"
+        >
+            <div class="contenido-video-inicio">
+                <p class="etiqueta-seccion">Vive la experiencia</p>
+                <h2 id="titulo-video">El juego comienza en GameHub</h2>
+                <p>
+                    Conoce nuevas formas de jugar y prepara tu espacio con la
+                    tecnología que necesitas.
+                </p>
+            </div>
+
+            <div class="video-inicio">
+                <iframe
+                    src="https://www.youtube.com/embed/RkC0l4iekYo"
+                    title="Presentación oficial de PlayStation 5"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <p>
+                GameHub Store - Proyecto Academico, Desarrollo Fullstack II
+            </p>
+            <p>© 2024 GameHub Store. Todos los derechos reservados.</p>
+            <a href="index.html">Inicio</a>
+            <img
+                src="images/logo.png"
+                alt="Logo de GameHub Store"
+                class="logo-footer"
+            >
+        </div>
+    </footer>
+
+    <script src="js/datos/datos-productos.js"></script>
+    <script src="js/datos/datos-categorias.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/vistas/vista-inicio.js"></script>
+</body>
+</html>
