@@ -60,6 +60,7 @@
 
     //Función para agergar al carrito un producto, si ya existe se suma la cantidad
     function agregarAlCarrito(carrito, producto, cantidad) {
+      const precioAplicable = producto.precioDescuento ?? producto.precio;
       const carritoActualizado = [];
       let yaExiste = false;
       for(let i = 0; i < carrito.length; i++) {
@@ -80,7 +81,7 @@
             carritoActualizado.push({
                 productoId: producto.id,
                 nombre: producto.nombre,
-                precioUnitario: producto.precio,
+                precioUnitario: precioAplicable,
                 cantidad: cantidad
             });
         }
@@ -89,12 +90,12 @@
     
     //Función para validar el stock de un producto antes de agregarlo al carrito
     function validarStock(producto, cantidadDeseada) {
-        if(cantidadDeseada <= 0){
+        if(!Number.isInteger(cantidadDeseada) || cantidadDeseada <= 0){
             return false;
         }
         return cantidadDeseada <= producto.stock;
     }
-
+ 
     //Función para aplicar un cupón al subtotal del carrito
     function aplicarCupon(subtotal, cupon) {
         let descuento = subtotal * (cupon.porcentajeDescuento / 100);

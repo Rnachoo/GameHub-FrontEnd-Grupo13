@@ -1,100 +1,107 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameHub Store | Producto</title>
-    <meta name="description" content="GameHub Store - Página de producto">
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-    <header class="encabezado">
-    <!--La idea es que todas las ventans compartan este Header, cambiando la lista de vinculos de nav. Aca por ejemplo estan todos, menos el mismo producto-->
-        <div class="contenedor">
-             <a href="index.html" class="marca-grupo">
-                <img src="images/logo.png"  
-                alt="GameHub Store - Ir al inicio" class="logo-encabezado">
-            </a>
-            <nav class="nav-principal" aria-label="Navegación principal">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Catálogo</a></li>
-                    <li><a href="carrito.html">Carrito(<span id="contador-carrito">0</span>)</a></li>
-                    <li><a href="mis-ordenes.html">Mis órdenes</a></li>
-                    <li><a href="crear-cuenta.html">Crear cuenta</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="contenedor">
-        <nav aria-label="Ruta de navegacion" class="ruta-navegacion">
-            <a href="index.html">Inicio</a> &gt;
-            <a href="catalogo.html">Catálogo</a> &gt;
-            <span aria-current="page">Producto</span>
-        </nav>
-
-        <article class="detalle-producto" id="detalle-producto">
-            <figure class="galeria-producto">
-                <img id="imagen-principal" src="https://casaroyal.vtexassets.com/arquivos/ids/163607-1200-1200?v=638874964810800000&width=1200&height=1200&aspect=true" 
-                alt="Imagen principal del producto" width="400" height="400">
-                <div id="miniaturas-producto" class="miniaturas" role="list" aria-label="Otras imagenes del producto">
-                    <!-- Miniaturas del producto se generarán dinámicamente aquí -->
-                </div>
-            </figure>
-
-            <div class="informacion-producto">
-                <h1 id="nombre-producto">Nombre del Producto</h1>
-                <p id="descripcion-producto">Descripción del producto...</p>
-                <p class="precio">
-                    <span id="precio-producto-anterior" class="precio-tachado" hidden></span>
-                    <span id="precio-producto-actual">Consultado precio...</span> 
-                </p>
-                <ul id="caracteristicas-producto" class="caracteristicas" aria-label="Características del producto">
-                    <!-- Características del producto se generarán dinámicamente aquí -->
-                </ul>
-                <p>
-                    Disponibilidad: <span id="disponibilidad-producto">Consultando stock...</span>
-                </p>
-
-                <form id="formulario-agregar-carrito" aria-label="Formulario para agregar producto al carrito" novalidate>
-                    <div class="campo-formulario">
-                        <label for="cantidad-producto">Cantidad:</label>
-                        <input type="number" id="cantidad-producto" name="cantidad" class="input-cantidad" min="1" value="1" required aria-describedby="error-cantidad">
-                        <span id="error-cantidad" class="mensaje-error" role="alert" aria-live="polite"></span>
-                    </div>
-                    
-                    <button class="boton-primario" type="submit">Agregar al carrito</button>
-                </form>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GameHub Store | Producto</title>
+        <meta name="description" content="GameHub Store - Página de producto">
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <header class="encabezado">
+        <!--La idea es que todas las ventans compartan este Header, cambiando la lista de vinculos de nav. Aca por ejemplo estan todos, menos el mismo producto-->
+            <div class="contenedor">
+                <a href="index.html" class="marca-grupo">
+                    <img src="images/logo.png"  
+                    alt="GameHub Store - Ir al inicio" class="logo-encabezado">
+                </a>
+                <nav class="nav-principal" aria-label="Navegación principal">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="carrito.html">Carrito(<span id="contador-carrito">0</span>)</a></li>
+                        <li><a href="mis-ordenes.html">Mis órdenes</a></li>
+                        <li><a href="crear-cuenta.html">Crear cuenta</a></li>
+                    </ul>
+                </nav>
             </div>
-        </article>
+        </header>
+
+        <main class="contenedor">
+            <nav aria-label="Ruta de navegacion" class="ruta-navegacion">
+                <a href="index.html">Inicio</a> &gt;
+                <a href="catalogo.html">Catálogo</a> &gt;
+                <span aria-current="page">Producto</span>
+            </nav>
+
+            <article class="detalle-producto" id="detalle-producto">
+                <figure class="galeria-producto">
+                    <img id="imagen-principal" src="https://casaroyal.vtexassets.com/arquivos/ids/163607-1200-1200?v=638874964810800000&width=1200&height=1200&aspect=true" 
+                    alt="Imagen principal del producto" width="400" height="400">
+                    <div id="miniaturas-producto" class="miniaturas" role="list" aria-label="Otras imagenes del producto">
+                        <!-- Miniaturas del producto se generarán dinámicamente aquí -->
+                    </div>
+                </figure>
+
+                <div class="informacion-producto">
+                    <h1 id="nombre-producto">Nombre del Producto</h1>
+                    <p id="descripcion-producto">Descripción del producto...</p>
+                    <p class="precio">
+                        <span id="precio-producto-anterior" class="precio-tachado" hidden></span>
+                        <span id="precio-producto-actual">Consultado precio...</span> 
+                    </p>
+                    <ul id="caracteristicas-producto" class="caracteristicas" aria-label="Características del producto">
+                        <!-- Características del producto se generarán dinámicamente aquí -->
+                    </ul>
+                    <p>
+                        Disponibilidad: <span id="disponibilidad-producto">Consultando stock...</span>
+                    </p>
+
+                    <form id="formulario-agregar-carrito" aria-label="Formulario para agregar producto al carrito" novalidate>
+                        <div class="campo-formulario">
+                            <label for="cantidad-producto">Cantidad:</label>
+                            <input type="number" id="cantidad-producto" name="cantidad" class="input-cantidad" min="1" value="1" required aria-describedby="error-cantidad">
+                            <span id="error-cantidad" class="mensaje-error" role="alert" aria-live="polite"></span>
+                        </div>
+                        
+                        <button class="boton-primario" type="submit">Agregar al carrito</button>
+                    </form>
+                </div>
+            </article>
 
 
-        <section class="resenas-producto" aria-labelledby="titulo-resenas">
-            <h2 id="titulo-resenas">Reseñas del producto</h2>
-            <p>
-                Promedio: <span id="promedio-resenas">Consultando...</span> / 5
-                (<span id="total-resenas">0</span> reseñas)
-            </p>
-            <ul id="lista-resenas" class="lista-resenas" aria-label="Lista de reseñas del producto">
-                <!-- Reseñas del producto se generarán dinámicamente aquí -->
-            </ul>
-        </section>
-    </main>
+            <section class="resenas-producto" aria-labelledby="titulo-resenas">
+                <h2 id="titulo-resenas">Reseñas del producto</h2>
+                <p>
+                    Promedio: <span id="promedio-resenas">Consultando...</span> / 5
+                    (<span id="total-resenas">0</span> reseñas)
+                </p>
+                <ul id="lista-resenas" class="lista-resenas" aria-label="Lista de reseñas del producto">
+                    <!-- Reseñas del producto se generarán dinámicamente aquí -->
+                </ul>
+            </section>
+        </main>
 
 
-    <!--Con el footer pasa igual que el encabezado, usaremos el mismo para todas las ventanas-->
-    <footer class="footer">
-        <div class="contenedor">
-            <p>GameHub Store - Proyecto Academico, Desarrollo Fullstack II</p>
-            <p>© 2024 GameHub Store. Todos los derechos reservados.</p>
-            <a href="index.html">Inicio</a>
-            <img src="images/logo.png" alt="Logo de GameHub Store" class="logo-footer">
-        </div>
-    </footer>
+        <!--Con el footer pasa igual que el encabezado, usaremos el mismo para todas las ventanas-->
+        <footer class="footer">
+            <div class="contenedor">
+                <p>GameHub Store - Proyecto Academico, Desarrollo Fullstack II</p>
+                <p>© 2024 GameHub Store. Todos los derechos reservados.</p>
+                <a href="index.html">Inicio</a>
+                <img src="images/logo.png" alt="Logo de GameHub Store" class="logo-footer">
+            </div>
+        </footer>
+
+        <script src="js/datos/datos-categorias.js" defer></script>
+        <script src="js/datos/datos-productos.js" defer></script>
+        <script src="js/datos/datos-resenas.js" defer></script>
+        <script src="js/carrito.js" defer></script>
+        <script src="js/validaciones.js" defer></script>
+        <script src="js/vistas/vista-producto.js" defer></script>
 
 
 
 
-</body>
-</html>
+    </body>
+    </html>
