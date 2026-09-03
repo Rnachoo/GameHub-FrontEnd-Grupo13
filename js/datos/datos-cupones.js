@@ -5,7 +5,7 @@ const CUPONES = [
     porcentajeDescuento: 10,
     tope: 15000,
     fechaInicio: "2024-01-01",
-    fechaFin: "2025-12-31"
+    fechaFin: "2027-12-31"
   },
   {
     codigo: "BIENVENIDO15",
@@ -13,7 +13,7 @@ const CUPONES = [
     porcentajeDescuento: 15,
     tope: 20000,
     fechaInicio: "2024-06-01",
-    fechaFin: "2024-12-31"
+    fechaFin: "2027-12-31"
   },
   {
     codigo: "GAMEHUB5",
@@ -21,7 +21,7 @@ const CUPONES = [
     porcentajeDescuento: 5,
     tope: 999999,
     fechaInicio: "2024-01-01",
-    fechaFin: "2026-12-31"
+    fechaFin: "2028-12-31"
   }
 ];
 
