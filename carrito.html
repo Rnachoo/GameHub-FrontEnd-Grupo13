@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Store | Carrito</title>
+    <meta name="description" content="GameHub Store - Carrito de Compras">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+    <!--La idea es que todas las ventans compartan este Header, cambiando la lista de vinculos de nav. Aca por ejemplo estan todos, menos el mismo producto-->
+        <div class="contenedor">
+            <a href="index.html" class="marca-grupo">
+                <img src="images/logo.png"  
+                alt="GameHub Store - Ir al inicio" class="logo-encabezado">
+            </a>
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html" aria-current="page">Carrito(<span id="contador-carrito">0</span>)</a></li>
+                    <li><a href="mis-ordenes.html">Mis órdenes</a></li>
+                    <li><a href="crear-cuenta.html">Crear cuenta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="contenedor">
+        <h1>Tu Carrito</h1>
+
+        <p id="carrito-vacio" hidden>
+            Tu carrito está vacío. <a href="catalogo.html">Ir al catálogo</a>
+        </p>
+
+        <div id="carrito-contenido">
+            <table id="tabla-carrito" class="tabla-carrito" aria-label="Productos en tu carrito">
+                <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio Unitario</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="lineas-carrito">
+                </tbody>
+            </table>
+
+            <div class="carrito-acciones">
+                <button type="button" id="boton-vaciar-carrito" class="boton-secundario">
+                    Vaciar carrito
+                </button>
+            </div>
+            <section class="resumen-carrito" aria-labelledby="titulo-resumen">
+                <h2 id="titulo-resumen">Resumen</h2>
+
+                <form id="formulario-cupon" novalidate>
+                    <div class="campo-formulario">
+                        <label for="codigo-cupon">Código de cupón</label>
+                        <input type="text" id="codigo-cupon" name="cupon" autocomplete="off" placeholder="Ej: GAMER10">
+                        <span id="error-cupon" class="mensaje-error" role="alert" aria-live="polite"></span>
+                    </div>
+                    <button type="submit" class="boton-secundario">Aplicar cupón</button>
+                </form>
+
+                <dl class="totales-carrito">
+                    <div class="fila-total">
+                        <dt>Subtotal</dt>
+                        <dd id="subtotal-carrito">$0</dd>
+                    </div>
+
+                    <div class="fila-total">
+                        <dt>Descuento</dt>
+                        <dd id="descuento-carrito">$0</dd>
+                    </div>
+                    <div class="fila-total fila-total-final">
+                        <dt>Total</dt>
+                        <dd id="total-carrito">$0</dd>
+                    </div>
+
+                </dl>
+                
+                <a href="checkout.html" id="boton-ir-checkout" class="boton-primario">Ir a pagar</a>
+
+             </section>
+        </div>
+    </main>
+
+
+    <!--Con el footer pasa igual que el encabezado, usaremos el mismo para todas las ventanas-->
+    <footer class="footer">
+        <div class="contenedor">
+            <p>GameHub Store - Proyecto Academico, Desarrollo Fullstack II</p>
+            <p>© 2026 GameHub Store. Todos los derechos reservados.</p>
+            <a href="index.html">Inicio</a>
+            <img src="images/logo.png" alt="Logo de GameHub Store" class="logo-footer">
+        </div>
+    </footer>
+
+    <script src="js/datos/datos-categorias.js" defer></script>
+    <script src="js/datos/datos-productos.js" defer></script>
+    <script src="js/datos/datos-cupones.js" defer></script>
+    <script src="js/carrito.js" defer></script>
+    <script src="js/validaciones.js" defer></script>
+    <script src="js/vistas/vista-carrito.js" defer></script>
+
+
+
+
+</body>
+</html>
