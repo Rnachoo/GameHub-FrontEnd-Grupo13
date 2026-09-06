@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Store | Crear cuenta</title>
+    <meta name="description" content="GameHub Store - Crea tu cuenta">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <a href="index.html" class="marca-grupo">
+                <img src="images/logo.png"
+                alt="GameHub Store - Ir al inicio" class="logo-encabezado">
+            </a>
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito(<span id="contador-carrito">0</span>)</a></li>
+                    <li><a href="mis-ordenes.html">Mis órdenes</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <nav class="ruta-navegacion" aria-label="Ruta de navegación">
+            <a href="index.html">Inicio</a> &gt;
+            <span aria-current="page">Crear cuenta</span>
+        </nav>
+
+        <section class="seccion-crear-cuenta" aria-labelledby="titulo-crear-cuenta">
+            <h1 id="titulo-crear-cuenta">Crea tu cuenta</h1>
+            <p>Regístrate para guardar tus datos de despacho y hacer seguimiento a tus compras.</p>
+
+            <form id="formulario-crear-cuenta" novalidate>
+                <div class="campo-formulario">
+                    <label for="nombre-cuenta">Nombre completo</label>
+                    <input type="text" id="nombre-cuenta" name="nombre" autocomplete="name" placeholder="Ej: Juan Pérez">
+                    <span id="error-nombre-cuenta" class="mensaje-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="correo-cuenta">Correo electrónico</label>
+                    <input type="email" id="correo-cuenta" name="correo" autocomplete="email" placeholder="tucorreo@ejemplo.com">
+                    <span id="error-correo-cuenta" class="mensaje-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="contrasena-cuenta">Contraseña</label>
+                    <input type="password" id="contrasena-cuenta" name="contrasena" autocomplete="new-password" aria-describedby="ayuda-contrasena">
+                    <span id="ayuda-contrasena">Debe tener al menos 8 caracteres.</span>
+                    <span id="error-contrasena-cuenta" class="mensaje-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="confirmar-contrasena-cuenta">Confirmar contraseña</label>
+                    <input type="password" id="confirmar-contrasena-cuenta" name="confirmarContrasena" autocomplete="new-password">
+                    <span id="error-confirmar-contrasena-cuenta" class="mensaje-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <button type="submit" id="boton-crear-cuenta" class="boton-primario">Crear cuenta</button>
+                <p id="mensaje-exito-cuenta" class="mensaje-exito" role="status" aria-live="polite" hidden></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <p>GameHub Store - Proyecto Academico, Desarrollo Fullstack II</p>
+            <p>© 2026 GameHub Store. Todos los derechos reservados.</p>
+            <a href="index.html">Inicio</a>
+            <img src="images/logo.png" alt="Logo de GameHub Store" class="logo-footer">
+        </div>
+    </footer>
+
+    <script src="js/carrito.js" defer></script>
+    <script src="js/validaciones.js" defer></script>
+    <script src="js/vistas/vista-crear-cuenta.js" defer></script>
+</body>
+</html>
