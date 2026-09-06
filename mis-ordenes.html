@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Store | Mis órdenes</title>
+    <meta name="description" content="Historial de compras en GameHub Store.">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <a href="index.html" class="marca-grupo">
+                <img src="images/logo.png" alt="GameHub Store - Ir al inicio" class="logo-encabezado">
+            </a>
+            <nav class="nav-principal" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="carrito.html">Carrito(<span id="contador-carrito">0</span>)</a></li>
+                    
+                    <li><a href="crear-cuenta.html">Crear cuenta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <nav class="ruta-navegacion" aria-label="Ruta de navegación">
+            <a href="index.html">Inicio</a> &gt;
+            <span aria-current="page">Mis órdenes</span>
+        </nav>
+
+        <section class="seccion-ordenes">
+            <div class="cabecera-mis-ordenes">
+                <h1>Mis órdenes</h1>
+                <p>Revisa el historial y estado de tus compras.</p>
+            </div>
+
+            <!-- Estado vacío ajustado al estilo del carrito -->
+            <div id="mensaje-sin-ordenes" class="sin-ordenes" hidden>
+                <p>Aún no has realizado ninguna compra. <a href="catalogo.html">Ir al catálogo</a></p>
+            </div>
+
+            <!-- Contenedor dinámico: JS inyectará las tarjetas (.tarjeta-orden) aquí -->
+            <div id="contenedor-ordenes" class="lista-ordenes">
+                <!-- El contenido se genera desde vista-mis-ordenes.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <p>GameHub Store - Proyecto Academico, Desarrollo Fullstack II</p>
+            <p>© 2026 GameHub Store. Todos los derechos reservados.</p>
+            <a href="index.html">Inicio</a>
+        </div>
+    </footer>
+
+    <!-- Scripts necesarios para esta vista -->
+    <script src="js/carrito.js" defer></script>
+    <script src="js/vistas/vista-mis-ordenes.js" defer></script>
+</body>
+</html>
