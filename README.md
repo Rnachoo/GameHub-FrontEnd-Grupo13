@@ -32,6 +32,8 @@ Nuestro sitio está compuesto por 7 vistas navegables, interconectadas por un me
 2. Abre `index.html` con Live Preview (extensión de VS Code) o directamente en el navegador
 3. Navega entre las vistas desde el menú superior
 
+## Paleta de colores
+
 Vitrina oscura — grises azulados y celeste, pensada para catálogos largos con poca luz.
 
 | Fondo | Superficie | Primario | Acento | Texto | Error |
